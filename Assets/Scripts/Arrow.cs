@@ -32,7 +32,7 @@ public class Arrow : MonoBehaviour
             transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y + speed * Time.deltaTime,0);
         }
     }
-    public void shoot(GameObject o) {
+    public virtual void shoot(GameObject o) {
         transform.Rotate(new Vector3(0, 0, Mathf.Atan((o.transform.position.y-transform.position.y)/(o.transform.position.x - transform.position.x))), Space.Self);
         transform.position = Vector3.MoveTowards(transform.position, o.transform.position, speed * Time.deltaTime);
         Vector3 dis = o.transform.position - transform.position;
@@ -45,7 +45,7 @@ public class Arrow : MonoBehaviour
     public void SetMonster(GameObject o) {
         this.Monster = o;
     }
-    public void SetDamage(GameObject o)
+    public virtual void SetDamage(GameObject o)
     {
         o.GetComponentInChildren<Monster>().health -= damage;
     }
