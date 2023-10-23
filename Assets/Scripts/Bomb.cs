@@ -7,9 +7,12 @@ public class Bomb : Arrow
 {
     public float radius;
     public LayerMask mask;
+    public Collider2D[] colliders;
     public override void SetDamage(GameObject o)
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(new Vector2(this.transform.position.x,transform.position.y), radius);
+
+        colliders = Physics2D.OverlapCircleAll(this.transform.position, radius,mask.value,0,2);
+
         foreach (Collider2D collider in colliders)
         {
             collider.GetComponent<Monster>().health -= damage;
@@ -20,4 +23,9 @@ public class Bomb : Arrow
     {
         base.shoot(o);
     }
+    private void Update()
+    {
+        Debug.Log(colliders);
+    }
+
 }

@@ -105,7 +105,7 @@ MonoBehaviour:
   radius: 10
   mask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 2147483647
 --- !u!50 &4374802017754335330
 Rigidbody2D:
   serializedVersion: 4
