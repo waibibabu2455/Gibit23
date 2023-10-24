@@ -15,17 +15,14 @@ public class Bomb : Arrow
 
         foreach (Collider2D collider in colliders)
         {
-            collider.GetComponent<Monster>().health -= damage;
-
+            if (collider.GetComponent<Monster>()!=null) {
+                collider.GetComponent<Monster>().health -= damage;
+            }
         }
     }
     public override void shoot(GameObject o)
     {
         base.shoot(o);
-    }
-    private void Update()
-    {
-        Debug.Log(colliders);
     }
 
 }

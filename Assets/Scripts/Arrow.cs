@@ -1,16 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Arrow : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     public float speed;
     public GameObject Monster;
+    public Vector3 MonsterPosition;
+    public Vector3 FinalPosition;
     public int damage;
+    public bool cancal;
     // Start is called before the first frame update
     void Start()
-    {   
+    {
+        MonsterPosition = this.Monster.transform.position;
+        cancal = true;
         if (Monster!=null && transform.position.x > Monster.transform.position.x) {
             transform.rotation = Quaternion.Euler(0, 0, 180);
         }
@@ -24,12 +30,21 @@ public class Arrow : MonoBehaviour
 
     }
     private void FixedUpdate()
-    {   if (this.Monster != null)
-        {
+    {   
+        if (this.Monster != null)
+        {   
+            MonsterPosition = this.Monster.transform.position;
             shoot(this.Monster);
         }
         else {
-            transform.position = new Vector3(transform.position.x + speed * Time.deltaTime, transform.position.y + speed * Time.deltaTime,0);
+            if (cancal)
+            {
+                FinalPosition = 20000 * MonsterPosition - 19999 * transform.position;
+            }
+            cancal = false;
+            transform.position = Vector3.MoveTowards(transform.position, FinalPosition, speed * Time.deltaTime);
+            transform.Rotate(new Vector3(0, 0, Mathf.Atan((FinalPosition.y-transform.position.y) / (FinalPosition.x-transform.position.x))));
+
         }
     }
     public virtual void shoot(GameObject o) {
