@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
         rigidbody.velocity = vel;
     }
     public void Attacking() {
-        Attack = true;
+        Attack = Input.GetKeyDown(KeyCode.Mouse0);
         animator.SetBool("Attack", Attack);
 
     }
