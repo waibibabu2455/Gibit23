@@ -14,6 +14,7 @@ public class Bullet : MonoBehaviour
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        Destroy(this.gameObject, 5f);
     }
 
     public void SetSpeed(Vector2 direction)
@@ -23,7 +24,10 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
+        if (other.gameObject.GetComponent<Monster>() != null)
+        {
+            Destroy(gameObject);
+        }
     }
     // Update is called once per frame
     void Update()

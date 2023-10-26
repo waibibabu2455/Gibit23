@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 shootDir;
 
     private float timer;
+    public Turrent[] turrents;
 
     void Start()
     {
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour
         CheckAttacking();
         AimTarget();
         Shoot();
+        SpawnTurret();
     }
 
     void Shoot()
@@ -108,7 +110,7 @@ public class PlayerController : MonoBehaviour
 
     void CheckAttacking()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && !Input.GetMouseButton(1))
         {
             StartCoroutine(PlayAttackAnimation());
         }
@@ -148,6 +150,22 @@ public class PlayerController : MonoBehaviour
              Destroy(aimIconInstance);
         }
     }
-
+    void SpawnTurret() {
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            Instantiate(turrents[0],new Vector3(transform.position.x, transform.position.y, 0),Quaternion.Euler(0,0,0));
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Instantiate(turrents[1], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Instantiate(turrents[2], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            Instantiate(turrents[3], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.Euler(0, 0, 0));
+        }
+    }
        
 }
