@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 401231782297598189}
   - component: {fileID: 401231782297598186}
   - component: {fileID: 401231782297598187}
-  - component: {fileID: 401231782297598188}
+  - component: {fileID: -4312723279001018117}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -145,7 +145,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.38175464, y: 0.03470341}
   m_Size: {x: 2.4801564, y: 4.8400965}
   m_Direction: 0
---- !u!114 &401231782297598188
+--- !u!114 &-4312723279001018117
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,7 +154,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 401231782297598185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5363bbbb55a1d2469ed91588d0b34c6, type: 3}
+  m_Script: {fileID: 11500000, guid: cf19f62d8475f40f8836ba072bf16774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  moveSpeed: 10
+  player: {fileID: 401231782297598185}
+  aimIconPrefab: {fileID: 0}
+  interval: 0.1
+  BulletPrefab: {fileID: 0}
