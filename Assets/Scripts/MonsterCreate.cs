@@ -8,11 +8,16 @@ public class MonsterCreate : MonoBehaviour
     public int i;
     public List<GameObject> monsters;
     public bool canset;
+    public PlayerController playerController;
     private void Start()
     {
         canset = false;
         i = 0;
         setinterval();
+        PlayerController player= Instantiate(playerController, new Vector3(0, 0, 0),Quaternion.Euler(0,0,0));
+        player.Level = 1;
+        player.Exp = 0;
+        player.gameObject.tag = ("Player");
     }
     // Update is called once per frame
     void Update()

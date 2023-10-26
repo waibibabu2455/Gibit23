@@ -101,3 +101,4 @@ MonoBehaviour:
   interval: 120
   timer: 0
   damage: 50
+  manaconsume: 80

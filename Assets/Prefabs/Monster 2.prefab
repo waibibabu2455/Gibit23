@@ -102,6 +102,8 @@ MonoBehaviour:
   collision2d: {fileID: -2894964198417718483}
   health: 200
   speed: 2
+  Exp: 80
+  Player: {fileID: 0}
 --- !u!61 &-2894964198417718483
 BoxCollider2D:
   m_ObjectHideFlags: 0

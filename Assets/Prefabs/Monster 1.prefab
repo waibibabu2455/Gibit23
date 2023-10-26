@@ -102,6 +102,8 @@ MonoBehaviour:
   collision2d: {fileID: -475051242961764507}
   health: 300
   speed: 1
+  Exp: 100
+  Player: {fileID: 0}
 --- !u!50 &8053623441080256513
 Rigidbody2D:
   serializedVersion: 4

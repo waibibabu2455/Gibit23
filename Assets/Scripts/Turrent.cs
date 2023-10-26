@@ -10,6 +10,7 @@ public class Turrent : MonoBehaviour
     public int interval;
     public int timer;
     public int damage;
+    public float manaconsume;
     void Start()
     {
         

@@ -168,6 +168,12 @@ MonoBehaviour:
   - {fileID: 6281626904673478562, guid: 6ff9afa08b75ba2419e81b474d8ee8ee, type: 3}
   - {fileID: 6281626904673478562, guid: afd0ac46430a5144aad34a1ebb0b0c6d, type: 3}
   - {fileID: 6281626904673478562, guid: 5b2fc509044d47e4db4f51bf0f7282e8, type: 3}
+  Mana: 0
+  MaxMana: 0
+  ManaRecovery: 0
+  ManaShoot: 0
+  Level: 1
+  Exp: 0
 --- !u!1 &1664753898630530091
 GameObject:
   m_ObjectHideFlags: 0

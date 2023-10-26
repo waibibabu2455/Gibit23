@@ -99,5 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrow: {fileID: -5745494558303155723, guid: ca06cd644dae8aa4cb65a739da80ef2e, type: 3}
   interval: 10
-  i: 0
+  timer: 0
   damage: 10
+  manaconsume: 100
