@@ -354,6 +354,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 401231782297598189, guid: fea829e190842904fa595cb741201c93, type: 3}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 401231782297598191, guid: fea829e190842904fa595cb741201c93, type: 3}
       propertyPath: m_RootOrder
       value: 1
