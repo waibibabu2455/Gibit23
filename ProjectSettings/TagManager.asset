@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Monster
   - Arrow
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: aimIcon
+    uniqueID: 353068191
+    locked: 0
+  - name: bullet
+    uniqueID: 3972445787
     locked: 0

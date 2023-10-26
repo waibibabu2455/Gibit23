@@ -25,4 +25,11 @@ public class Monster : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Bullet")){
+            health -= collision.GetComponent<Bullet>().damage;
+        }
+    }
 }
