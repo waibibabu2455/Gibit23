@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf19f62d8475f40f8836ba072bf16774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 3
   player: {fileID: 401231782297598185}
   aimIconPrefab: {fileID: 80439429490734829, guid: 108257c4f2aff4d0e9a85ca7abc4f1b6, type: 3}
   interval: 0.1
