@@ -67,7 +67,6 @@ public class MonsterShoot : MonoBehaviour
     {
         if (Player != null)
         {
-            Debug.Log(new Vector2(Player.transform.position.x, Player.transform.position.y));
             return new Vector2(Player.transform.position.x, Player.transform.position.y);
         }
         else

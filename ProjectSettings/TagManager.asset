@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Monster
   - Arrow
+  - MonsterBullet
   layers:
   - Default
   - TransparentFX
@@ -59,4 +60,7 @@ TagManager:
     locked: 0
   - name: Bullet
     uniqueID: 1674167831
+    locked: 0
+  - name: Absorb
+    uniqueID: 2699312651
     locked: 0

@@ -172,7 +172,6 @@ MonoBehaviour:
   - {fileID: 6071166793696656060, guid: 786a601fbfb27401dac4acad321afed7, type: 3}
   - {fileID: 3569834773369653981, guid: f4b3d0c40cc7949be9060a18ea522f75, type: 3}
   - {fileID: 4026477927022548612, guid: 299f22514c584455d9b3dd8ae4a71715, type: 3}
-  shootInterval: 0.1
+  shootInterval: 0.5
   bulletSpeed: 5
-  Player: {fileID: 401231782297598185, guid: fea829e190842904fa595cb741201c93, type: 3}
   currentMonster: {fileID: 8052565536882746074}

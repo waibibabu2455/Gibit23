@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collision2d: {fileID: -475051242961764507}
-  health: 300
+  health: 100
   speed: 1
   currentColor: BLUE
   Exp: 100
@@ -174,5 +174,4 @@ MonoBehaviour:
   - {fileID: 4026477927022548612, guid: 299f22514c584455d9b3dd8ae4a71715, type: 3}
   shootInterval: 0.5
   bulletSpeed: 5
-  Player: {fileID: 401231782297598185, guid: fea829e190842904fa595cb741201c93, type: 3}
   currentMonster: {fileID: 8052565536882746074}

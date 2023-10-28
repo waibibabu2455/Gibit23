@@ -36,7 +36,7 @@ public class MonsterCreate : MonoBehaviour
         }
     }
     void setinterval() { 
-        interval=Random.Range(0, 100);
+        interval=Random.Range(0, 3000);
     }
     void spawnmonster()
     {

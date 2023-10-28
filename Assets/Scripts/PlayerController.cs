@@ -50,6 +50,15 @@ public class PlayerController : MonoBehaviour
 
     public int Exp=0;
 
+    public GameObject absorbSpritePrefab;
+
+    private GameObject displayedSprite;
+
+    public int CyanBulletNum;
+    public int PurpleBulletNum;
+    public int YellowBulletNum;
+
+
     void Start()
     {
         isRunning = false;
@@ -63,6 +72,10 @@ public class PlayerController : MonoBehaviour
         currentIndex = 0;
         currentBulletPrefab = BulletPrefabLs[currentIndex];
 
+        CyanBulletNum = 0;
+        PurpleBulletNum = 0;
+        YellowBulletNum = 0;
+
     }
 
     // Update is called once per frame
@@ -75,6 +88,57 @@ public class PlayerController : MonoBehaviour
         SpawnTurret();
         ManaRecover();
         SwitchColor();
+        checkAbsorb();
+    }
+
+    void checkAbsorb()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if(displayedSprite != null){HideAbsorbSprite();}
+            else{ShowAbsorbSprite();}
+        }
+        if(Input.GetKeyUp(KeyCode.Q)){
+            if(displayedSprite != null){HideAbsorbSprite();}
+        }
+    }
+
+    void HideAbsorbSprite(){
+        Destroy(displayedSprite);
+        displayedSprite = null;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("MonsterBullet")) {
+
+            string bulletColour = collision.GetComponent<MonsterBullet>().bulletColor;
+            if(displayedSprite != null){AbsorbBullet(bulletColour);}
+            Destroy(collision.gameObject);
+        }
+    }
+
+    void AbsorbBullet(string bulletColour){
+        switch(bulletColour)
+        {
+            case "YELLOW":
+                YellowBulletNum += 1;
+                break;
+            case "PURPLE":
+                PurpleBulletNum += 1;
+                break;
+            case "CYAN":
+                CyanBulletNum += 1;
+                break;
+            default:
+                break;
+        }
+    }
+
+    void ShowAbsorbSprite()
+    {
+        displayedSprite = Instantiate(absorbSpritePrefab, muzzlePos.position, Quaternion.identity);
+        displayedSprite.transform.SetParent(muzzlePos);
     }
 
     void Shoot()
@@ -115,8 +179,32 @@ public class PlayerController : MonoBehaviour
         //     bullet.GetComponent<Bullet>().SetSpeed(shootDir);
         //     Mana -= ManaShoot;
         // }
-        GameObject bullet = Instantiate(currentBulletPrefab, muzzlePos.position, Quaternion.identity);
-        bullet.GetComponent<Bullet>().SetSpeed(shootDir);
+        Debug.Log(currentIndex);
+        if(currentIndex == 3){     // Shooting purple bullet
+            if(PurpleBulletNum > 0){
+                GameObject bullet = Instantiate(currentBulletPrefab, muzzlePos.position, Quaternion.identity);
+                bullet.GetComponent<Bullet>().SetSpeed(shootDir);
+                PurpleBulletNum -= 1;
+            }
+        }
+        else if(currentIndex == 4){     // Shooting cyan bullet
+            if(CyanBulletNum > 0){
+                GameObject bullet = Instantiate(currentBulletPrefab, muzzlePos.position, Quaternion.identity);
+                bullet.GetComponent<Bullet>().SetSpeed(shootDir);
+                CyanBulletNum -= 1;
+            }
+        }
+        else if(currentIndex == 5){     // Shooting yellow bullet
+            if(YellowBulletNum > 0){
+                GameObject bullet = Instantiate(currentBulletPrefab, muzzlePos.position, Quaternion.identity);
+                bullet.GetComponent<Bullet>().SetSpeed(shootDir);
+                YellowBulletNum -= 1;
+            }
+        }
+        else{
+            GameObject bullet = Instantiate(currentBulletPrefab, muzzlePos.position, Quaternion.identity);
+            bullet.GetComponent<Bullet>().SetSpeed(shootDir);
+        }
     }
 
     void Moving()

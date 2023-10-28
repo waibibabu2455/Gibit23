@@ -71,7 +71,13 @@ public class Monster : MonoBehaviour
         if (collision.CompareTag("Bullet")) {
 
             string bulletColour = collision.GetComponent<Bullet>().colour;
-            ChangeMonsterColor(bulletColour);
+            if(!string.Equals(currentColor, bulletColour)){
+                ChangeMonsterColor(bulletColour);
+            }
+            else{
+                health -= collision.GetComponent<Bullet>().damage;
+                if(health<=0){Destroy(this.gameObject);}
+            }
 
         }
     }

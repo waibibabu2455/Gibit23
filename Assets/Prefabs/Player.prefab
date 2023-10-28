@@ -165,8 +165,11 @@ MonoBehaviour:
   interval: 0.1
   BulletPrefabLs:
   - {fileID: 6298627894350848991, guid: 491c35034ce394855b607ed09545b741, type: 3}
-  - {fileID: 7521297805672191765, guid: e158ecd23726844818122c4688faa551, type: 3}
   - {fileID: 2869116738357253304, guid: f87b805bb7d9d4f02b9ac707f375598f, type: 3}
+  - {fileID: 7521297805672191765, guid: e158ecd23726844818122c4688faa551, type: 3}
+  - {fileID: 8002182848425678020, guid: a8a9e16ecec8b491e91cba44f10219dd, type: 3}
+  - {fileID: 3539616853886390862, guid: 9dbd3cde7b81d4c1a8e942290b548ba3, type: 3}
+  - {fileID: 4802535901710998559, guid: 04c448ca3d3b647a6aab366c61842c7d, type: 3}
   turrents:
   - {fileID: 6281626904673478562, guid: 96f78e241041e9c49a8afe3746a2e07f, type: 3}
   - {fileID: 6281626904673478562, guid: 6ff9afa08b75ba2419e81b474d8ee8ee, type: 3}
@@ -178,6 +181,11 @@ MonoBehaviour:
   ManaShoot: 0
   Level: 1
   Exp: 0
+  absorbSpritePrefab: {fileID: 8200465234818132282, guid: 6d247ff0ba00a4578b89a9411c8eb14e,
+    type: 3}
+  CyanBulletNum: 0
+  PurpleBulletNum: 0
+  YellowBulletNum: 0
 --- !u!1 &1664753898630530091
 GameObject:
   m_ObjectHideFlags: 0
