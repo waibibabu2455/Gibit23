@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -4312723279001018117}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,9 +160,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   player: {fileID: 401231782297598185}
-  aimIconPrefab: {fileID: 80439429490734829, guid: 108257c4f2aff4d0e9a85ca7abc4f1b6, type: 3}
+  aimIconPrefab: {fileID: 80439429490734829, guid: 108257c4f2aff4d0e9a85ca7abc4f1b6,
+    type: 3}
   interval: 0.1
-  BulletPrefab: {fileID: 1734434147090833818, guid: 2cb25a028b32e4dd79594c58738b5776, type: 3}
+  BulletPrefabLs:
+  - {fileID: 6298627894350848991, guid: 491c35034ce394855b607ed09545b741, type: 3}
+  - {fileID: 7521297805672191765, guid: e158ecd23726844818122c4688faa551, type: 3}
+  - {fileID: 2869116738357253304, guid: f87b805bb7d9d4f02b9ac707f375598f, type: 3}
   turrents:
   - {fileID: 6281626904673478562, guid: 96f78e241041e9c49a8afe3746a2e07f, type: 3}
   - {fileID: 6281626904673478562, guid: 6ff9afa08b75ba2419e81b474d8ee8ee, type: 3}

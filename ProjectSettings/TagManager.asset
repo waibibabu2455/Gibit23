@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Monster
-  - Arrow
+  - Undefined
   - Bullet
+  - Monster
   layers:
   - Default
   - TransparentFX
@@ -28,9 +28,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Layer 1
+  - Layer 2
+  - Layer 3
   - 
   - 
   - 
@@ -44,9 +44,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: aimIcon
-    uniqueID: 353068191
+  - name: Layer 1
+    uniqueID: 2425651459
     locked: 0
-  - name: bullet
-    uniqueID: 3972445787
+  - name: Layer 2
+    uniqueID: 4250941897
+    locked: 0
+  - name: Layer 3
+    uniqueID: 4189426099
+    locked: 0
+  - name: aim
+    uniqueID: 4149345201
+    locked: 0
+  - name: Bullet
+    uniqueID: 1674167831
     locked: 0

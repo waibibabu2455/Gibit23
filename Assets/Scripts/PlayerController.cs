@@ -21,7 +21,10 @@ public class PlayerController : MonoBehaviour
 
     public float interval;
 
-    public GameObject BulletPrefab;
+    public List<GameObject> BulletPrefabLs;
+
+    private GameObject currentBulletPrefab;
+    private int currentIndex = 0;
 
     private Transform muzzlePos;
 
@@ -57,6 +60,9 @@ public class PlayerController : MonoBehaviour
         ManaRecovery = 1f;
         Mana = 100;
         MaxMana = 100;
+        currentIndex = 0;
+        currentBulletPrefab = BulletPrefabLs[currentIndex];
+
     }
 
     // Update is called once per frame
@@ -68,6 +74,7 @@ public class PlayerController : MonoBehaviour
         Shoot();
         SpawnTurret();
         ManaRecover();
+        SwitchColor();
     }
 
     void Shoot()
@@ -91,13 +98,25 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Fire() {
-        if (Mana >= ManaShoot)
-        {
-            GameObject bullet = Instantiate(BulletPrefab, muzzlePos.position, Quaternion.identity);
-            bullet.GetComponent<Bullet>().SetSpeed(shootDir);
-            Mana -= ManaShoot;
+    void SwitchColor()
+    {
+        float scrollDelta = Input.GetAxis("Mouse ScrollWheel");
+        if(scrollDelta != 0f){
+            currentIndex = (currentIndex + (scrollDelta > 0f ? 1 : -1) + BulletPrefabLs.Count) % BulletPrefabLs.Count;
+            currentBulletPrefab = BulletPrefabLs[currentIndex];
+            // Debug.Log(currentBulletPrefab);
         }
+    }
+
+    void Fire() {
+        // if (Mana >= ManaShoot)
+        // {
+        //     GameObject bullet = Instantiate(currentBulletPrefab, muzzlePos.position, Quaternion.identity);
+        //     bullet.GetComponent<Bullet>().SetSpeed(shootDir);
+        //     Mana -= ManaShoot;
+        // }
+        GameObject bullet = Instantiate(currentBulletPrefab, muzzlePos.position, Quaternion.identity);
+        bullet.GetComponent<Bullet>().SetSpeed(shootDir);
     }
 
     void Moving()
@@ -166,7 +185,7 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
             mousePosition.z = 0f;
-            Debug.Log("Aim Icon Position: " + aimIconInstance.transform.position);
+            // Debug.Log("Aim Icon Position: " + aimIconInstance.transform.position);
             aimIconInstance.transform.position = -mousePosition;
         }
         if (Input.GetMouseButtonUp(1) && aimIconInstance != null)

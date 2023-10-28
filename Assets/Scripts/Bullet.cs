@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour
 {
     public float speed;
     public int damage;
+
+    public string colour;
     private Rigidbody2D rigidbody;
      
     
