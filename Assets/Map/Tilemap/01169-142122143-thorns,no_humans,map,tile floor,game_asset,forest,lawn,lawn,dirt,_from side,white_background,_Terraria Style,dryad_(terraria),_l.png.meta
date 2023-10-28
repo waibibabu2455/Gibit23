@@ -1,0 +1,1717 @@
+fileFormatVersion: 2
+guid: 2658781580d88f342b984464e3c7bab6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feff7aead9034cc4bae997558068abbf
+      internalID: 1649097633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01a777c835d28943afbaca9a6024e15
+      internalID: 1108813431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e3ebfef5c360949bda5047c06bf2c3
+      internalID: -1493426510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd53e944f2bec9946a644ca68109b2b9
+      internalID: 1488741958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b43b935aed03274aa937272b3f4aa4e
+      internalID: -1562023005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d268836b11ac124ab11be9cb5d03470
+      internalID: 690254914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8017d2b67d705d54bb8604e85dbe2c99
+      internalID: -870565059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629615a2c430dce4584214e3ffda5f1e
+      internalID: 513413836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3584ff41e77fcad4caeced2884913179
+      internalID: -81591411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_9
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3298d696f8c1f84caa400616005306a
+      internalID: -964211837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4e1cb41fb07414e99db40e7e0fff6b
+      internalID: 1722595941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_11
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ae00e235a639548bb5a411bf30f515
+      internalID: 1437025949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_12
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c29c09db65621a4baea4a4756593d72
+      internalID: -726580434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0409c3d2c77df428bfae015ad80d2a
+      internalID: 761617966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711f1b8980327dc43b9cf7a7f7e666f3
+      internalID: 701315995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_15
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27db6659b02f9744ba94e1fd7dc88f3a
+      internalID: 1807345529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7e8749fe3aab24a830f989f0d86e22
+      internalID: 372552158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70159209d591c84e8f5a6c943fdcbdd
+      internalID: 335877122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_18
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58625c6453c0322458f5af12b755a972
+      internalID: -136890602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5719c19a1f8e34498853d8474bc5c7
+      internalID: -1486151847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_20
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ccb05581e8d70419b914baddee81dc
+      internalID: 287417286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_21
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18052662d48299c4889b387365f24d6f
+      internalID: 68319102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_22
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9d314a4e5fb1643873c8347ce81786
+      internalID: -25907332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_23
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf38f859fe39b124eaae1d94419938c0
+      internalID: 47136321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7186b261969548c44a71d7250d095151
+      internalID: -133635914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e3d27939a20b849accf15e3baf39c9
+      internalID: -977351693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced163ccfe3f6d248a1927db3685502d
+      internalID: 39703728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136b8b95ee76d4944949ed9ba4bb9e3f
+      internalID: 593485901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fcf846da2a94e344901377fc391b587
+      internalID: 1890884309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa185b824b14a5408090818b2dce26e
+      internalID: 1315933957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_30
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516863e62a93efa4fa9a785a3f9e48eb
+      internalID: -1964933717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_31
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056765d7c8e454045954ecc5601ce84b
+      internalID: -215446877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_32
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f0d215558eb674181e10d1c905b5be
+      internalID: -1566826141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_33
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6d457b79791fe43b00dcae4d6c485a
+      internalID: -2021702458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_34
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebaf917ce667e9449bf9a524194b127d
+      internalID: 1990550348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b207198fcb6cc7f4eb07c8e43aa9ffe7
+      internalID: -1500369386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_36
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f357d4ba7f89340ac356b62d2b971f
+      internalID: 1469843061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_37
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9121162fa5b7340b53dd860b219418
+      internalID: 1258729172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8702d84c9cfd834bad7d56347a6043b
+      internalID: 1263720065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_39
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d8eabfd6349684ca97a2a69d269b8a
+      internalID: 344815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_40
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f084a3bf31a91d44abef22792d1a7aa
+      internalID: -919789098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_41
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c602a7af1a5daba48a4ba359d9ac1552
+      internalID: 612054208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_42
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f6a6fa22e870d4eb7f701cde382d8e
+      internalID: -1218219954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_43
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 693471ac486dfac4fa51a3cf0d34b061
+      internalID: -1352572023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_44
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d987e73e4dba941905a2e51fdd39e8
+      internalID: -755331743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_45
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40625b40d7ff9034cbae68d44373a01c
+      internalID: -775683775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b890be3384310c04b85acd670efbcc08
+      internalID: -1001394896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_47
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d973d60628c3144cae7756ef95756cf
+      internalID: -1894577539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_48
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f8abe4b63bf9b4882ecfbd5bed5f9b
+      internalID: 656728099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_49
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d82a9bc6cdff94685b9ea5e675a965
+      internalID: -2112739725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_50
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15243cb780bfbd94d82d4e5132e57593
+      internalID: 1619456207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_51
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38cd9383ae5b953489c5180f37906bfd
+      internalID: 1516795726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_52
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521906dbfc022b14d8e0a57bd7f95f84
+      internalID: -1206218398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_53
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2255df65882bd5b45a1644c92a8d0fd6
+      internalID: 105067841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_54
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfd149c235f2754c999a655b6297485
+      internalID: -443706717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_55
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09cbeb320ef1ae046bbd0877af8b48a3
+      internalID: -2037778572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_56
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8fc634d2c437a4fbd37b1d67d19af7
+      internalID: -1749345034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264915a6b5335524db444bd3694ea05d
+      internalID: -796197562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_58
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8133c2e8e5afd4f84c9fbde8212e0b
+      internalID: 905817494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_59
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38da489b19f47441b67cf291233982f
+      internalID: -529002893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_60
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2904a45b42b8e0147ab819ebc451b205
+      internalID: -323494191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_61
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba6eff1dfa0970e4488833184a6c0683
+      internalID: 52329872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_62
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 454bbe213414e2c47899a83f9b7cac26
+      internalID: 631471381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_63
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0451c28871a05e8409cf024c61a7743f
+      internalID: 1478784169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_64
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04166ea4a07da948a2ccc0b9bea67dc
+      internalID: -238247858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_65
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529d78c5646ab704e8847a851e68ab03
+      internalID: -1124990704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_66
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7994383e40349e04c9fb4b71e8485df1
+      internalID: 111318909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from
+        side,white_background,_Terraria Style,dryad_(terraria),_l_67
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf71cf3535fcdf643953c32d2de99cbf
+      internalID: 1468517233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_0: 1649097633
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_1: 1108813431
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_10: 1722595941
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_11: 1437025949
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_12: -726580434
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_13: 761617966
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_14: 701315995
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_15: 1807345529
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_16: 372552158
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_17: 335877122
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_18: -136890602
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_19: -1486151847
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_2: -1493426510
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_20: 287417286
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_21: 68319102
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_22: -25907332
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_23: 47136321
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_24: -133635914
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_25: -977351693
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_26: 39703728
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_27: 593485901
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_28: 1890884309
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_29: 1315933957
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_3: 1488741958
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_30: -1964933717
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_31: -215446877
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_32: -1566826141
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_33: -2021702458
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_34: 1990550348
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_35: -1500369386
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_36: 1469843061
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_37: 1258729172
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_38: 1263720065
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_39: 344815
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_4: -1562023005
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_40: -919789098
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_41: 612054208
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_42: -1218219954
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_43: -1352572023
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_44: -755331743
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_45: -775683775
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_46: -1001394896
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_47: -1894577539
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_48: 656728099
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_49: -2112739725
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_5: 690254914
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_50: 1619456207
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_51: 1516795726
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_52: -1206218398
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_53: 105067841
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_54: -443706717
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_55: -2037778572
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_56: -1749345034
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_57: -796197562
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_58: 905817494
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_59: -529002893
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_6: -870565059
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_60: -323494191
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_61: 52329872
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_62: 631471381
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_63: 1478784169
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_64: -238247858
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_65: -1124990704
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_66: 111318909
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_67: 1468517233
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_7: 513413836
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_8: -81591411
+      01169-142122143-thorns,no_humans,map,tile floor,game_asset,forest,lawn,lawn,dirt,_from side,white_background,_Terraria Style,dryad_(terraria),_l_9: -964211837
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
