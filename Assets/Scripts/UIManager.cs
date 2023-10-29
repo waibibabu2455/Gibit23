@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject canvas;
     public VolumeController optionpanel;
+    public bool canmute;
     // Update is called once per frame
     private void Start()
     {
@@ -16,16 +17,13 @@ public class UIManager : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Time.timeScale = 0;
-            canvas.gameObject.SetActive(true);
-        }
+
 
     }
 
     public void esc() {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
     }
     public void option() {
 
@@ -38,5 +36,8 @@ public class UIManager : MonoBehaviour
     public void returntogame(){
         canvas.gameObject.SetActive(false);
         Time.timeScale = 1;
+    }
+    public void showguide() { 
+        
     }
 }
