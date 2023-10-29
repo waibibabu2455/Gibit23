@@ -16,10 +16,21 @@ public class Monster : MonoBehaviour
     private List<string> baseColorBulletList = new List<string> { "RED", "BLUE", "GREEN" };
     private SpriteRenderer spriteRenderer;
 
-    public Sprite blankSPrite;
     public Sprite yellowSprite;
     public Sprite purpleSprite;
     public Sprite cyanSprite;
+    public RuntimeAnimatorController yellowMonsterAnimator;
+    public RuntimeAnimatorController purpleMonsterAnimator;
+    public RuntimeAnimatorController cyanMonsterAnimator;
+
+    private Animator animator;
+
+    private bool isAttacking = false;
+
+    private bool isHurting = false;
+
+    private bool isDied = false;
+    
     
 
     private Dictionary<string, string> colourCombineMap = new Dictionary<string, string>();
@@ -32,6 +43,7 @@ public class Monster : MonoBehaviour
         InitializeColourCombineMap();
         InitializeColourParmMap();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     void InitializeColourCombineMap()
@@ -56,7 +68,7 @@ public class Monster : MonoBehaviour
     {
         transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, 0);
         if (health <= 0) {
-            Destroy(this.gameObject);
+            IsDied();
             Player.GetComponent<PlayerController>().ExpUp(Exp);
 
         }
@@ -65,6 +77,7 @@ public class Monster : MonoBehaviour
 
         }
     }
+
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -76,10 +89,41 @@ public class Monster : MonoBehaviour
             }
             else{
                 health -= collision.GetComponent<Bullet>().damage;
-                if(health<=0){Destroy(this.gameObject);}
+                StartCoroutine(IsHurting());
+                if(health<=0){IsDied();}
+              
             }
 
         }
+    }
+
+    void IsAttacking()
+    {
+        isAttacking = true;
+        animator.SetBool("IsAttack", true);
+    }
+
+    void IsDied()
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.velocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        isDied = true;
+        animator.SetBool("IsDied", true);
+        Destroy(this.gameObject, 2f);
+    }
+
+    IEnumerator IsHurting()
+    {
+        isHurting = true;
+        animator.SetBool("IsHurt", true);
+        AnimationClip hurtClip = animator.runtimeAnimatorController.animationClips[0];
+        float hurtDuration = hurtClip.length/2;
+        yield return new WaitForSeconds(hurtDuration);
+
+        animator.SetBool("IsHurt", false);
+        isHurting = false;
+        
     }
 
     void ChangeMonsterColor(string bulletColour)
@@ -88,7 +132,6 @@ public class Monster : MonoBehaviour
         if(baseColorBulletList.Contains(currentColor) && baseColorBulletList.Contains(bulletColour)){
             if(!string.Equals(currentColor, bulletColour)){
 
-                Debug.Log("in");
 
                 string combineColorStr = currentColor+"+"+bulletColour;
                 currentColor = colourCombineMap[combineColorStr];
@@ -96,15 +139,22 @@ public class Monster : MonoBehaviour
                 switch(currentColor)
                 {
                     case "YELLOW":
+                        Debug.Log("in");
                         spriteRenderer.sprite = yellowSprite;
+                        animator.runtimeAnimatorController = yellowMonsterAnimator;
+                        IsAttacking();
                         break;
 
                     case "CYAN":
                         spriteRenderer.sprite = cyanSprite;
+                        animator.runtimeAnimatorController = cyanMonsterAnimator;
+                        IsAttacking();
                         break;
                     
                     case "PURPLE":
                         spriteRenderer.sprite = purpleSprite;
+                        animator.runtimeAnimatorController = purpleMonsterAnimator;
+                        IsAttacking();
                         break;
                         
                     default:

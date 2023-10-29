@@ -5,6 +5,7 @@ using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,9 +18,19 @@ public class PlayerController : MonoBehaviour
     private bool isRunning = false;
 
     private bool isAttacking = false;
-    private Animator animator;
 
+    private bool isHurting = false;
+
+    private bool isAbsorbing = false;
+    private bool isDied = false;
+    private Animator animator;
     public float interval;
+
+    public int health;
+
+    private int currentHealth;
+
+    public Image healthFillImage;
 
     public List<GameObject> BulletPrefabLs;
 
@@ -76,13 +87,14 @@ public class PlayerController : MonoBehaviour
         PurpleBulletNum = 0;
         YellowBulletNum = 0;
 
+        currentHealth = health;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         Moving();
-        CheckAttacking();
         AimTarget();
         Shoot();
         SpawnTurret();
@@ -93,19 +105,24 @@ public class PlayerController : MonoBehaviour
 
     void checkAbsorb()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if(!isDied)
         {
-            if(displayedSprite != null){HideAbsorbSprite();}
-            else{ShowAbsorbSprite();}
-        }
-        if(Input.GetKeyUp(KeyCode.Q)){
-            if(displayedSprite != null){HideAbsorbSprite();}
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                if(displayedSprite != null){HideAbsorbSprite();}
+                else{ShowAbsorbSprite();}
+            }
+            if(Input.GetKeyUp(KeyCode.Q)){
+                if(displayedSprite != null){HideAbsorbSprite();}
+            }
         }
     }
 
     void HideAbsorbSprite(){
         Destroy(displayedSprite);
         displayedSprite = null;
+        isAbsorbing = false;
+        animator.SetBool("IsAbsorb", isAbsorbing);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -114,24 +131,75 @@ public class PlayerController : MonoBehaviour
 
             string bulletColour = collision.GetComponent<MonsterBullet>().bulletColor;
             if(displayedSprite != null){AbsorbBullet(bulletColour);}
+            else{
+                if(health > 0){ IsHurt();}
+                else{ IsDied();}
+               
+            }
             Destroy(collision.gameObject);
         }
     }
 
+    void IsHurt()
+    {
+        health -= 1;
+        //TakeDamage(1);
+        StartCoroutine(IsHurting());
+        
+    }
+
+    void IsDied()
+    {
+        isDied = true;
+
+
+        animator.SetBool("IsDied", true);
+        
+    }
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        currentHealth = Mathf.Clamp(currentHealth, 0, health);
+        //UpdateHealthBar();
+
+    }
+
+    void UpdateHealthBar()
+    {
+        healthFillImage.fillAmount = currentHealth / health;
+    }
+
+    IEnumerator IsHurting()
+    {
+        isHurting = true;
+        animator.SetBool("IsHurt", true);
+        AnimationClip hurtClip = animator.runtimeAnimatorController.animationClips[0];
+        float hurtDuration = hurtClip.length/2;
+        yield return new WaitForSeconds(hurtDuration);
+
+        animator.SetBool("IsHurt", false);
+        isHurting = false;
+        
+    }
+
     void AbsorbBullet(string bulletColour){
-        switch(bulletColour)
+        if(!isDied)
         {
-            case "YELLOW":
-                YellowBulletNum += 1;
-                break;
-            case "PURPLE":
-                PurpleBulletNum += 1;
-                break;
-            case "CYAN":
-                CyanBulletNum += 1;
-                break;
-            default:
-                break;
+            switch(bulletColour)
+            {
+                case "YELLOW":
+                    YellowBulletNum += 1;
+                    break;
+                case "PURPLE":
+                    PurpleBulletNum += 1;
+                    break;
+                case "CYAN":
+                    CyanBulletNum += 1;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
@@ -139,24 +207,29 @@ public class PlayerController : MonoBehaviour
     {
         displayedSprite = Instantiate(absorbSpritePrefab, muzzlePos.position, Quaternion.identity);
         displayedSprite.transform.SetParent(muzzlePos);
+        isAbsorbing = true;
+        animator.SetBool("IsAbsorb", isAbsorbing);
     }
 
     void Shoot()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
-        shootDir = -(mousePos + new Vector2(player.transform.position.x, player.transform.position.y)).normalized;
+        if(!isDied)
+        {
+            mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
+            shootDir = -(mousePos + new Vector2(player.transform.position.x, player.transform.position.y)).normalized;
 
-        if (timer != 0) {
-            timer -= Time.deltaTime;
-            if (timer <= 0) {
-                timer = 0;
+            if (timer != 0) {
+                timer -= Time.deltaTime;
+                if (timer <= 0) {
+                    timer = 0;
+                }
             }
-        }
-        if (Input.GetMouseButton(1)) {
-            if (Input.GetMouseButtonDown(0)) {
-                if (timer == 0) {
-                    Fire();
-                    timer = interval;
+            if (Input.GetMouseButton(1)) {
+                if (Input.GetMouseButtonDown(0)) {
+                    if (timer == 0) {
+                        Fire();
+                        timer = interval;
+                    }
                 }
             }
         }
@@ -185,6 +258,7 @@ public class PlayerController : MonoBehaviour
                 GameObject bullet = Instantiate(currentBulletPrefab, muzzlePos.position, Quaternion.identity);
                 bullet.GetComponent<Bullet>().SetSpeed(shootDir);
                 PurpleBulletNum -= 1;
+                StartCoroutine(PlayAttackAnimation());
             }
         }
         else if(currentIndex == 4){     // Shooting cyan bullet
@@ -192,6 +266,7 @@ public class PlayerController : MonoBehaviour
                 GameObject bullet = Instantiate(currentBulletPrefab, muzzlePos.position, Quaternion.identity);
                 bullet.GetComponent<Bullet>().SetSpeed(shootDir);
                 CyanBulletNum -= 1;
+                StartCoroutine(PlayAttackAnimation());
             }
         }
         else if(currentIndex == 5){     // Shooting yellow bullet
@@ -199,27 +274,32 @@ public class PlayerController : MonoBehaviour
                 GameObject bullet = Instantiate(currentBulletPrefab, muzzlePos.position, Quaternion.identity);
                 bullet.GetComponent<Bullet>().SetSpeed(shootDir);
                 YellowBulletNum -= 1;
+                StartCoroutine(PlayAttackAnimation());
             }
         }
         else{
             GameObject bullet = Instantiate(currentBulletPrefab, muzzlePos.position, Quaternion.identity);
             bullet.GetComponent<Bullet>().SetSpeed(shootDir);
+            StartCoroutine(PlayAttackAnimation());
         }
     }
 
     void Moving()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        if(!isDied)
+        {
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
 
-        SetAnim(horizontalInput, verticalInput);
+            SetAnim(horizontalInput, verticalInput);
 
-        if (Mathf.Abs(horizontalInput) > 0.1f) {
-            ChangeFaceDirection(horizontalInput);
+            if (Mathf.Abs(horizontalInput) > 0.1f) {
+                ChangeFaceDirection(horizontalInput);
+            }
+
+            Vector2 newVector = new Vector2(horizontalInput, verticalInput) * moveSpeed * Time.deltaTime;
+            player.transform.Translate(newVector);
         }
-
-        Vector2 newVector = new Vector2(horizontalInput, verticalInput) * moveSpeed * Time.deltaTime;
-        player.transform.Translate(newVector);
 
     }
 
@@ -233,17 +313,9 @@ public class PlayerController : MonoBehaviour
     void ChangeFaceDirection(float horizontalInput)
     {
         if (horizontalInput < 0.1f) {
-            player.transform.localScale = new Vector2(0.3f, 0.3f);
+            player.transform.localScale = new Vector2(0.2f, 0.2f);
         } else {
-            player.transform.localScale = new Vector2(-0.3f, 0.3f);
-        }
-    }
-
-    void CheckAttacking()
-    {
-        if (Input.GetMouseButtonDown(0) && !Input.GetMouseButton(1))
-        {
-            StartCoroutine(PlayAttackAnimation());
+            player.transform.localScale = new Vector2(-0.2f, 0.2f);
         }
     }
 
@@ -262,24 +334,28 @@ public class PlayerController : MonoBehaviour
 
     void AimTarget()
     {
-        if (Input.GetMouseButtonDown(1))
+        if(!isDied)
         {
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
-            mousePosition.z = 0f;
+            if (Input.GetMouseButtonDown(1))
+            {
+                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
+                mousePosition.z = 0f;
 
-            aimIconInstance = Instantiate(aimIconPrefab, mousePosition, Quaternion.identity);
+                aimIconInstance = Instantiate(aimIconPrefab, mousePosition, Quaternion.identity);
+            }
+            if (Input.GetMouseButton(1))
+            {
+                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
+                mousePosition.z = 0f;
+                // Debug.Log("Aim Icon Position: " + aimIconInstance.transform.position);
+                aimIconInstance.transform.position = -mousePosition;
+            }
+            if (Input.GetMouseButtonUp(1) && aimIconInstance != null)
+            {
+                Destroy(aimIconInstance);
+            }
         }
-        if (Input.GetMouseButton(1))
-        {
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
-            mousePosition.z = 0f;
-            // Debug.Log("Aim Icon Position: " + aimIconInstance.transform.position);
-            aimIconInstance.transform.position = -mousePosition;
-        }
-        if (Input.GetMouseButtonUp(1) && aimIconInstance != null)
-        {
-            Destroy(aimIconInstance);
-        }
+       
     }
     void SpawnTurret() {
         if (Input.GetKeyDown(KeyCode.Alpha1)) {

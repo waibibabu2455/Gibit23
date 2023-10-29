@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Monster>() != null)
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
     // Update is called once per frame
