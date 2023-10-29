@@ -26,9 +26,9 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public float interval;
 
-    public int health;
+    public float health;
 
-    private int currentHealth;
+    private float currentHealth;
 
     private GameObject healthFillImage;
 
@@ -160,7 +160,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    void TakeDamage(int damage)
+    void TakeDamage(float damage)
     {
         UpdateHealthBar();
 
@@ -169,9 +169,10 @@ public class PlayerController : MonoBehaviour
     void UpdateHealthBar()
     {
         Vector2 newSize = healthFillImage.transform.localScale;
-        reductionAmount = healthFillImage.transform.localScale.x / 5;
+        reductionAmount = healthFillImage.transform.localScale.x / 4;
         newSize.x -= reductionAmount;
         healthFillImage.transform.localScale = newSize;
+        
 
     }
 
