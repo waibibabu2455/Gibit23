@@ -204,7 +204,7 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetMouseButtonDown(0)) {
                     if (timer == 0) {
                         Fire();
-                        AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("audio/attack.wav"),transform.position);
+                        AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("audio/attack"),transform.position,1);
                         timer = interval;
                     }
                 }
