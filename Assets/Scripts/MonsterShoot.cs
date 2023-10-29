@@ -59,6 +59,13 @@ public class MonsterShoot : MonoBehaviour
                 Vector2 direction = (GetPlayerPosition() - (Vector2)transform.position).normalized;
 
                 bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+                if (bullet.transform.position.y < Player.transform.position.y)
+                {
+                    bullet.transform.rotation = Quaternion.Euler(0, 0, -Mathf.Rad2Deg * Mathf.Atan((Player.transform.position.x - bullet.transform.position.x) / (Player.transform.position.y - bullet.transform.position.y)));
+                }
+                else {
+                    bullet.transform.rotation = Quaternion.Euler(0, 0, 180-Mathf.Rad2Deg * Mathf.Atan((Player.transform.position.x - bullet.transform.position.x) / (Player.transform.position.y - bullet.transform.position.y)));
+                }
             }
     }
             
