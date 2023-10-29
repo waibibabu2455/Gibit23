@@ -58,6 +58,9 @@ TagManager:
   - name: aim
     uniqueID: 4149345201
     locked: 0
+  - name: Monster
+    uniqueID: 2894307235
+    locked: 0
   - name: Bullet
     uniqueID: 1674167831
     locked: 0
