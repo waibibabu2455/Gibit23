@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
 
     private GameObject healthFillImage;
 
+    private RectTransform healthFillRectTransform;
+
     public List<GameObject> BulletPrefabLs;
 
     private GameObject currentBulletPrefab;
@@ -73,8 +75,10 @@ public class PlayerController : MonoBehaviour
         PurpleBulletNum = 0;
         YellowBulletNum = 0;
 
+        health = 100;
         currentHealth = health;
         healthFillImage = GameObject.FindWithTag("health");
+        
 
     }
 
@@ -116,7 +120,7 @@ public class PlayerController : MonoBehaviour
 
             string bulletColour = collision.GetComponent<MonsterBullet>().bulletColor;
             if(displayedSprite != null){AbsorbBullet(bulletColour);}
-            else{
+            else{ 
                 if(health > 0){ IsHurt();}
                 else{ IsDied();}
                
@@ -127,8 +131,7 @@ public class PlayerController : MonoBehaviour
 
     void IsHurt()
     {
-        health -= 1;
-        TakeDamage(1);
+        health -= 10;
         StartCoroutine(IsHurting());
         
     }
@@ -142,21 +145,6 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    void TakeDamage(float damage)
-    {
-        UpdateHealthBar();
-
-    }
-
-    void UpdateHealthBar()
-    {
-        Vector2 newSize = healthFillImage.transform.localScale;
-        reductionAmount = healthFillImage.transform.localScale.x / 4;
-        newSize.x -= reductionAmount;
-        healthFillImage.transform.localScale = newSize;
-        
-
-    }
 
     IEnumerator IsHurting()
     {

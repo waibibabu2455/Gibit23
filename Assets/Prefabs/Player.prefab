@@ -194,9 +194,7 @@ MonoBehaviour:
   aimIconPrefab: {fileID: 80439429490734829, guid: 108257c4f2aff4d0e9a85ca7abc4f1b6,
     type: 3}
   interval: 0.1
-  health: 10
-  healthFillImage: {fileID: 1808728089073121779, guid: 92487b998ee554a0c93c026828bf88c5,
-    type: 3}
+  health: 100
   BulletPrefabLs:
   - {fileID: 7923659811901886337, guid: 59fa62a39e8304541b1f97c23208ab0e, type: 3}
   - {fileID: 7923659811901886337, guid: 00daa52728bfe44bd83dfacf2e879dcd, type: 3}
@@ -209,14 +207,9 @@ MonoBehaviour:
   - {fileID: 6281626904673478562, guid: 6ff9afa08b75ba2419e81b474d8ee8ee, type: 3}
   - {fileID: 6281626904673478562, guid: afd0ac46430a5144aad34a1ebb0b0c6d, type: 3}
   - {fileID: 6281626904673478562, guid: 5b2fc509044d47e4db4f51bf0f7282e8, type: 3}
-  Mana: 0
-  MaxMana: 0
-  ManaRecovery: 0
-  ManaShoot: 0
-  Level: 1
-  Exp: 0
   absorbSpritePrefab: {fileID: 8200465234818132282, guid: 6d247ff0ba00a4578b89a9411c8eb14e,
     type: 3}
   CyanBulletNum: 0
   PurpleBulletNum: 0
   YellowBulletNum: 0
+  camera: {fileID: 0}
