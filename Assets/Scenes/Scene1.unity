@@ -14759,6 +14759,7 @@ GameObject:
   - component: {fileID: 1859128094}
   - component: {fileID: 1859128096}
   - component: {fileID: 1859128095}
+  - component: {fileID: 1859128097}
   m_Layer: 5
   m_Name: Health
   m_TagString: health
@@ -14807,10 +14808,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 81b58543e783a483091e08748279d704, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -14824,6 +14825,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859128093}
   m_CullTransparentMesh: 1
+--- !u!114 &1859128097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859128093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5541d3cd7e404453fa978379741fbef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bar: {fileID: 1859128095}
+  lerpSpeed: 3
+  maxHealth: 100
 --- !u!1 &1866759085
 GameObject:
   m_ObjectHideFlags: 0
