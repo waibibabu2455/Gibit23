@@ -9,6 +9,7 @@ TagManager:
   - Monster
   - Arrow
   - MonsterBullet
+  - health
   layers:
   - Default
   - TransparentFX

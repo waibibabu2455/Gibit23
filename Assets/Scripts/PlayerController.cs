@@ -26,11 +26,11 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public float interval;
 
-    public int health;
+    public float health;
 
-    private int currentHealth;
+    private float currentHealth;
 
-    public Image healthFillImage;
+    private GameObject healthFillImage;
 
     public List<GameObject> BulletPrefabLs;
 
@@ -55,6 +55,8 @@ public class PlayerController : MonoBehaviour
     public int PurpleBulletNum;
     public int YellowBulletNum;
 
+    private float reductionAmount;
+
     public CameraFollow camera;
 
 
@@ -72,6 +74,7 @@ public class PlayerController : MonoBehaviour
         YellowBulletNum = 0;
 
         currentHealth = health;
+        healthFillImage = GameObject.FindWithTag("health");
 
     }
 
@@ -125,7 +128,7 @@ public class PlayerController : MonoBehaviour
     void IsHurt()
     {
         health -= 1;
-        //TakeDamage(1);
+        TakeDamage(1);
         StartCoroutine(IsHurting());
         
     }
@@ -139,17 +142,20 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    void TakeDamage(int damage)
+    void TakeDamage(float damage)
     {
-        currentHealth -= damage;
-        currentHealth = Mathf.Clamp(currentHealth, 0, health);
-        //UpdateHealthBar();
+        UpdateHealthBar();
 
     }
 
     void UpdateHealthBar()
     {
-        healthFillImage.fillAmount = currentHealth / health;
+        Vector2 newSize = healthFillImage.transform.localScale;
+        reductionAmount = healthFillImage.transform.localScale.x / 4;
+        newSize.x -= reductionAmount;
+        healthFillImage.transform.localScale = newSize;
+        
+
     }
 
     IEnumerator IsHurting()
