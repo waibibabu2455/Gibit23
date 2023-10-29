@@ -63,6 +63,21 @@ public class PlayerController : MonoBehaviour
 
     private bool isCd;
 
+    private AudioSource audioSource;
+
+    public AudioClip AttackSound;
+
+    public AudioClip hurtSound;
+
+    public AudioClip absorbSound;
+
+    public AudioClip switchSound;
+
+    public AudioClip diedSound;
+
+
+    
+
 
     void Start()
     {
@@ -81,6 +96,7 @@ public class PlayerController : MonoBehaviour
         health = 100;
         currentHealth = health;
         healthFillImage = GameObject.FindWithTag("health");
+        audioSource = GetComponent<AudioSource>();
         
 
     }
@@ -159,9 +175,8 @@ public class PlayerController : MonoBehaviour
     void IsDied()
     {
         isDied = true;
-
-
         animator.SetBool("IsDied", true);
+        audioSource.PlayOneShot(diedSound);
         
     }
 
@@ -170,6 +185,7 @@ public class PlayerController : MonoBehaviour
     {
         isHurting = true;
         animator.SetBool("IsHurt", true);
+        audioSource.PlayOneShot(hurtSound);
         AnimationClip hurtClip = animator.runtimeAnimatorController.animationClips[0];
         float hurtDuration = hurtClip.length/2;
         yield return new WaitForSeconds(hurtDuration);
@@ -205,6 +221,7 @@ public class PlayerController : MonoBehaviour
         displayedSprite.transform.SetParent(muzzlePos);
         isAbsorbing = true;
         animator.SetBool("IsAbsorb", isAbsorbing);
+        audioSource.PlayOneShot(absorbSound);
         Invoke("isCdAbsorb", 5f);
     }
 
@@ -225,6 +242,8 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetMouseButtonDown(0)) {
                     if (timer == 0) {
                         Fire();
+                        audioSource.PlayOneShot(AttackSound);
+                        //AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("audio/attack"),100f);
                         timer = interval;
                     }
                 }
@@ -237,31 +256,37 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             currentIndex = 0;
+            audioSource.PlayOneShot(switchSound);
             currentBulletPrefab = BulletPrefabLs[currentIndex];
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             currentIndex = 1;
+            audioSource.PlayOneShot(switchSound);
             currentBulletPrefab = BulletPrefabLs[currentIndex];
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             currentIndex = 2;
+            audioSource.PlayOneShot(switchSound);
             currentBulletPrefab = BulletPrefabLs[currentIndex];
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             currentIndex = 3;
+            audioSource.PlayOneShot(switchSound);
             currentBulletPrefab = BulletPrefabLs[currentIndex];
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             currentIndex = 4;
+            audioSource.PlayOneShot(switchSound);
             currentBulletPrefab = BulletPrefabLs[currentIndex];
         }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
             currentIndex = 5;
+            audioSource.PlayOneShot(switchSound);
             currentBulletPrefab = BulletPrefabLs[currentIndex];
         }
         // Debug.Log(currentBulletPrefab);

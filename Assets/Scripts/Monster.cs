@@ -36,6 +36,18 @@ public class Monster : MonoBehaviour
     private Dictionary<string, string> colourCombineMap = new Dictionary<string, string>();
 
     private Dictionary<string, Color> colourParmMap = new Dictionary<string, Color>();
+
+    private AudioSource audioSource;
+
+    public AudioClip AttackSound;
+
+    public AudioClip hurtSound;
+
+    public AudioClip diedSound;
+
+    public AudioClip switchSound;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +56,7 @@ public class Monster : MonoBehaviour
         InitializeColourParmMap();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void InitializeColourCombineMap()
@@ -94,6 +107,10 @@ public class Monster : MonoBehaviour
             }
 
         }
+        if (collision.CompareTag("Player"))
+        {
+        IsDied();
+        }
     }
 
     void IsAttacking()
@@ -109,6 +126,7 @@ public class Monster : MonoBehaviour
         rb.angularVelocity = 0f;
         isDied = true;
         animator.SetBool("IsDied", true);
+        audioSource.PlayOneShot(diedSound);
         Destroy(this.gameObject, 2f);
     }
 
@@ -116,6 +134,7 @@ public class Monster : MonoBehaviour
     {
         isHurting = true;
         animator.SetBool("IsHurt", true);
+        audioSource.PlayOneShot(hurtSound);
         AnimationClip hurtClip = animator.runtimeAnimatorController.animationClips[0];
         float hurtDuration = hurtClip.length/2;
         yield return new WaitForSeconds(hurtDuration);
@@ -135,6 +154,7 @@ public class Monster : MonoBehaviour
                 string combineColorStr = currentColor+"+"+bulletColour;
                 currentColor = colourCombineMap[combineColorStr];
 
+                audioSource.PlayOneShot(switchSound);
                 switch(currentColor)
                 {
                     case "YELLOW":
@@ -142,18 +162,21 @@ public class Monster : MonoBehaviour
                         spriteRenderer.sprite = yellowSprite;
                         animator.runtimeAnimatorController = yellowMonsterAnimator;
                         IsAttacking();
+                        audioSource.PlayOneShot(AttackSound);
                         break;
 
                     case "CYAN":
                         spriteRenderer.sprite = cyanSprite;
                         animator.runtimeAnimatorController = cyanMonsterAnimator;
                         IsAttacking();
+                        audioSource.PlayOneShot(AttackSound);
                         break;
                     
                     case "PURPLE":
                         spriteRenderer.sprite = purpleSprite;
                         animator.runtimeAnimatorController = purpleMonsterAnimator;
                         IsAttacking();
+                        audioSource.PlayOneShot(AttackSound);
                         break;
                         
                     default:
