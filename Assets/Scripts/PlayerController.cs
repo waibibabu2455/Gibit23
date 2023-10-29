@@ -61,11 +61,14 @@ public class PlayerController : MonoBehaviour
 
     public CameraFollow camera;
 
+    private bool isCd;
+
 
     void Start()
     {
         isRunning = false;
         isAttacking = false;
+        isCd = false;
         animator = GetComponent<Animator>();
         muzzlePos = transform.Find("Muzzle");
         currentIndex = 0;
@@ -96,7 +99,7 @@ public class PlayerController : MonoBehaviour
     {
         if(!isDied)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (!isCd && Input.GetKeyDown(KeyCode.Q))
             {
                 if(displayedSprite != null){HideAbsorbSprite();}
                 else{ShowAbsorbSprite();}
@@ -107,11 +110,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void isCdAbsorb()
+    {
+        isCd = true;
+        HideAbsorbSprite();
+        Invoke("resetCdAbsorb",5f);
+    }
+
+    void resetCdAbsorb()
+    {
+        isCd = false;
+    }
+
     void HideAbsorbSprite(){
         Destroy(displayedSprite);
         displayedSprite = null;
         isAbsorbing = false;
         animator.SetBool("IsAbsorb", isAbsorbing);
+        
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -126,6 +142,10 @@ public class PlayerController : MonoBehaviour
                
             }
             Destroy(collision.gameObject);
+        }
+        if (collision.CompareTag("Monster")) {
+            if(health > 0){ IsHurt();}
+            else{ IsDied();}
         }
     }
 
@@ -185,6 +205,7 @@ public class PlayerController : MonoBehaviour
         displayedSprite.transform.SetParent(muzzlePos);
         isAbsorbing = true;
         animator.SetBool("IsAbsorb", isAbsorbing);
+        Invoke("isCdAbsorb", 5f);
     }
 
     void Shoot()

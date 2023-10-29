@@ -254,6 +254,9 @@ MonoBehaviour:
   optionpanel: {fileID: 4583833050225338449, guid: 394415355eb47504386942bc52679b08,
     type: 3}
   canmute: 0
+  canshow: 0
+  guideimg: {fileID: 0}
+  img: {fileID: 0}
 --- !u!114 &16513769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,6 +485,9 @@ MonoBehaviour:
   canvas: {fileID: 1089414620}
   optionpanel: {fileID: 0}
   canmute: 0
+  canshow: 0
+  guideimg: {fileID: 0}
+  img: {fileID: 0}
 --- !u!114 &39524605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -612,7 +618,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 49, y: 67}
+  m_AnchoredPosition: {x: -67, y: 312.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &138546996
@@ -962,6 +968,9 @@ MonoBehaviour:
   canvas: {fileID: 1089414620}
   optionpanel: {fileID: 0}
   canmute: 0
+  canshow: 0
+  guideimg: {fileID: 0}
+  img: {fileID: 0}
 --- !u!114 &178165446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12261,9 +12270,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e83d931d6aba4eb8ac4252dd160f019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  redLeafModule: {fileID: 20951969}
+  blueLeafModule: {fileID: 1683899388}
+  greenLeafModule: {fileID: 1825944165}
+  purpleLeafModule: {fileID: 1722711685}
+  cyanLeafModule: {fileID: 1348346925}
+  yellowLeafModule: {fileID: 2143926700}
+  unselectColor: {r: 0.48235294, g: 0.59607846, b: 0.15294118, a: 1}
+  selectColor: {r: 0.74509805, g: 1, b: 0, a: 1}
   YellowBulletnumText: {fileID: 138546998}
   PurpleBulletnumText: {fileID: 1659433813}
   CyanBulletnumText: {fileID: 1166770826}
+  currentLeafIdx: 0
 --- !u!1001 &405139723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12818,6 +12836,9 @@ MonoBehaviour:
   optionpanel: {fileID: 4583833050225338449, guid: 394415355eb47504386942bc52679b08,
     type: 3}
   canmute: 0
+  canshow: 0
+  guideimg: {fileID: 0}
+  img: {fileID: 0}
 --- !u!4 &797607003
 Transform:
   m_ObjectHideFlags: 0
@@ -12895,6 +12916,9 @@ MonoBehaviour:
   canvas: {fileID: 1089414620}
   optionpanel: {fileID: 0}
   canmute: 0
+  canshow: 0
+  guideimg: {fileID: 0}
+  img: {fileID: 0}
 --- !u!114 &808942738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14149,6 +14173,9 @@ MonoBehaviour:
   canvas: {fileID: 1089414620}
   optionpanel: {fileID: 0}
   canmute: 0
+  canshow: 0
+  guideimg: {fileID: 0}
+  img: {fileID: 0}
 --- !u!114 &1306204994
 MonoBehaviour:
   m_ObjectHideFlags: 0
