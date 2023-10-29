@@ -69,7 +69,6 @@ public class Monster : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime);
         if (health <= 0) {
             IsDied();
-            Player.GetComponent<PlayerController>().ExpUp(Exp);
 
         }
         if (transform.position.x < -10) {

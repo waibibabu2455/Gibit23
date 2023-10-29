@@ -18,6 +18,7 @@ public class MonsterCreate : MonoBehaviour
         PlayerController player= Instantiate(playerController, new Vector3(0, 0, 0),Quaternion.Euler(0,0,0));
         player.gameObject.tag = ("Player");
         camera.GetComponent<CameraFollow>().player = player;
+        player.camera = camera;
     }
     // Update is called once per frame
     void Update()

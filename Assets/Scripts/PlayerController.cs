@@ -46,20 +46,6 @@ public class PlayerController : MonoBehaviour
     private float timer;
     
     public Turrent[] turrents;
-    
-    public float Mana;
-
-    public float MaxMana;
-
-    public float ManaRecovery;
-
-    public int ManaShoot;
-
-    public int Level=1;
-
-    public int LevelUpExp => (Level^2) * 100+1;
-
-    public int Exp=0;
 
     public GameObject absorbSpritePrefab;
 
@@ -69,6 +55,8 @@ public class PlayerController : MonoBehaviour
     public int PurpleBulletNum;
     public int YellowBulletNum;
 
+    public CameraFollow camera;
+
 
     void Start()
     {
@@ -76,10 +64,6 @@ public class PlayerController : MonoBehaviour
         isAttacking = false;
         animator = GetComponent<Animator>();
         muzzlePos = transform.Find("Muzzle");
-        ManaShoot = 10;
-        ManaRecovery = 1f;
-        Mana = 100;
-        MaxMana = 100;
         currentIndex = 0;
         currentBulletPrefab = BulletPrefabLs[currentIndex];
 
@@ -97,8 +81,6 @@ public class PlayerController : MonoBehaviour
         Moving();
         AimTarget();
         Shoot();
-        SpawnTurret();
-        ManaRecover();
         SwitchColor();
         checkAbsorb();
     }
@@ -215,8 +197,8 @@ public class PlayerController : MonoBehaviour
     {
         if(!isDied)
         {
-            mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
-            shootDir = -(mousePos + new Vector2(player.transform.position.x, player.transform.position.y)).normalized;
+            mousePos = camera.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, camera.GetComponent<Camera>().transform.position.z));
+            shootDir = (-mousePos+new Vector2(player.transform.position.x, player.transform.position.y)).normalized;
 
             if (timer != 0) {
                 timer -= Time.deltaTime;
@@ -237,21 +219,41 @@ public class PlayerController : MonoBehaviour
 
     void SwitchColor()
     {
-        float scrollDelta = Input.GetAxis("Mouse ScrollWheel");
-        if(scrollDelta != 0f){
-            currentIndex = (currentIndex + (scrollDelta > 0f ? 1 : -1) + BulletPrefabLs.Count) % BulletPrefabLs.Count;
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            currentIndex = 0;
             currentBulletPrefab = BulletPrefabLs[currentIndex];
-            // Debug.Log(currentBulletPrefab);
         }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            currentIndex = 1;
+            currentBulletPrefab = BulletPrefabLs[currentIndex];
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            currentIndex = 2;
+            currentBulletPrefab = BulletPrefabLs[currentIndex];
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            currentIndex = 3;
+            currentBulletPrefab = BulletPrefabLs[currentIndex];
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            currentIndex = 4;
+            currentBulletPrefab = BulletPrefabLs[currentIndex];
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            currentIndex = 5;
+            currentBulletPrefab = BulletPrefabLs[currentIndex];
+        }
+        // Debug.Log(currentBulletPrefab);
+
     }
 
     void Fire() {
-        // if (Mana >= ManaShoot)
-        // {
-        //     GameObject bullet = Instantiate(currentBulletPrefab, muzzlePos.position, Quaternion.identity);
-        //     bullet.GetComponent<Bullet>().SetSpeed(shootDir);
-        //     Mana -= ManaShoot;
-        // }
         Debug.Log(currentIndex);
         if(currentIndex == 3){     // Shooting purple bullet
             if(PurpleBulletNum > 0){
@@ -338,17 +340,19 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(1))
             {
-                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
+                Vector3 mousePosition = camera.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
                 mousePosition.z = 0f;
 
-                aimIconInstance = Instantiate(aimIconPrefab, mousePosition, Quaternion.identity);
+                aimIconInstance = Instantiate(aimIconPrefab, new Vector3(mousePosition.x, mousePosition.y, 0), Quaternion.identity);
             }
             if (Input.GetMouseButton(1))
             {
-                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
+                Vector3 mousePosition = camera.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
                 mousePosition.z = 0f;
-                // Debug.Log("Aim Icon Position: " + aimIconInstance.transform.position);
-                aimIconInstance.transform.position = -mousePosition;
+
+                aimIconInstance.transform.position = -mousePosition+2*transform.position;
+
+                Debug.Log( transform.position-aimIconInstance.transform.position);
             }
             if (Input.GetMouseButtonUp(1) && aimIconInstance != null)
             {
@@ -357,56 +361,6 @@ public class PlayerController : MonoBehaviour
         }
        
     }
-    void SpawnTurret() {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            if (Mana >= turrents[0].manaconsume)
-            {
-                Instantiate(turrents[0], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-                Mana -= turrents[0].manaconsume;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            if (Mana >= turrents[1].manaconsume)
-            {
-                Instantiate(turrents[1], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-                Mana -= turrents[1].manaconsume;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            if (Mana >= turrents[2].manaconsume)
-            {
-                Instantiate(turrents[2], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-                Mana -= turrents[2].manaconsume;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            if (Mana >= turrents[3].manaconsume)
-            {
-                Instantiate(turrents[3], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.Euler(0, 0, 0));
-                Mana -= turrents[3].manaconsume;
-            }
-        }
-    }
-    void ManaRecover() {
-        if (Mana < MaxMana)
-        {
-            Mana += ManaRecovery * Time.deltaTime;
-        }
-    }
 
-    public void ExpUp(int i) {
-        Exp += i;
-        if (Exp >= LevelUpExp) {
-            LevelUP();
-        }
-    }
-    void LevelUP() {
-        Exp -= LevelUpExp;
-        Level += 1;
-
-    }
        
 }
