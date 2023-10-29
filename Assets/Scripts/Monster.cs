@@ -66,7 +66,7 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, 0);
+        transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime);
         if (health <= 0) {
             IsDied();
             Player.GetComponent<PlayerController>().ExpUp(Exp);
