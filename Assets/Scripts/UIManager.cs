@@ -10,10 +10,14 @@ public class UIManager : MonoBehaviour
     public GameObject canvas;
     public VolumeController optionpanel;
     public bool canmute;
+    public bool canshow;
+    public GameObject guideimg;
+    public GameObject img;
     // Update is called once per frame
     private void Start()
     {
         canvas.gameObject.SetActive(false);
+        canshow = true;
     }
     void Update()
     {
@@ -37,7 +41,16 @@ public class UIManager : MonoBehaviour
         canvas.gameObject.SetActive(false);
         Time.timeScale = 1;
     }
-    public void showguide() { 
-        
+    public void showguide() {
+        if (canshow)
+        {
+             img=Instantiate(guideimg);
+            canshow = false;
+        }
+        else { 
+            Destroy(img);
+            canshow=true;
+
+        }
     }
 }
