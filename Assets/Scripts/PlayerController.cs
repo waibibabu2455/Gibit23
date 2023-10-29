@@ -55,11 +55,9 @@ public class PlayerController : MonoBehaviour
     public int PurpleBulletNum;
     public int YellowBulletNum;
 
-<<<<<<< HEAD
     private float reductionAmount;
-=======
+
     public CameraFollow camera;
->>>>>>> 881079a370a85e93e56bcf96fbd103921ed3385e
 
 
     void Start()
