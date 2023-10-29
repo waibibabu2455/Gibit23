@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     public List<GameObject> BulletPrefabLs;
 
     private GameObject currentBulletPrefab;
-    private int currentIndex = 0;
+    public int currentIndex = 0;
 
     private Transform muzzlePos;
 
