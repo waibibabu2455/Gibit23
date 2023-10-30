@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MonsterCreate : MonoBehaviour
 {
@@ -10,6 +12,9 @@ public class MonsterCreate : MonoBehaviour
     public bool canset;
     public PlayerController playerController;
     public CameraFollow camera;
+    public Text text;
+    public float timer;
+
     private void Start()
     {
         canset = false;
@@ -19,6 +24,8 @@ public class MonsterCreate : MonoBehaviour
         player.gameObject.tag = ("Player");
         camera.GetComponent<CameraFollow>().player = player;
         player.camera = camera;
+        timer = 100f;
+        text.text=timer.ToString();
     }
     // Update is called once per frame
     void Update()
@@ -34,6 +41,11 @@ public class MonsterCreate : MonoBehaviour
         }
         else {
             i += 1;
+        }
+        timer -= Time.deltaTime;
+        text.text=timer.ToString() ;
+        if (timer <= 0) {
+            SceneManager.LoadScene("Success");
         }
     }
     void setinterval() { 

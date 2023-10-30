@@ -109,7 +109,7 @@ public class Monster : MonoBehaviour
         }
         if (collision.CompareTag("Player"))
         {
-        IsDied();
+            IsDied();
         }
     }
 
@@ -127,7 +127,7 @@ public class Monster : MonoBehaviour
         isDied = true;
         animator.SetBool("IsDied", true);
         audioSource.PlayOneShot(diedSound);
-        Destroy(this.gameObject, 2f);
+        Destroy(this.gameObject);
     }
 
     IEnumerator IsHurting()
